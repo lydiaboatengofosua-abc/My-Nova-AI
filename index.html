@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOVA is your personal AI companion for learning, planning, and creating.">
+  <title>NOVA AI — Your Personal Genius</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#"><span class="brand-icon">✳</span> NOVA</a>
+    <p class="menu-label">WORKSPACE</p>
+    <button class="nav-item active" id="homeButton">⌂ <span>Home</span></button>
+    <button class="nav-item" id="focusButton">✦ <span>AI Assistant</span></button>
+    <div class="sidebar-bottom">
+      <div class="mini-avatar">N</div>
+      <div>
+        <strong>Your space</strong>
+        <p>Make it yours</p>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <span class="status"><span class="status-dot"></span> YOUR PERSONAL AI SPACE</span>
+      <button class="profile-button" id="profileButton">Your preferences ↗</button>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">A NEW KIND OF INTELLIGENCE</div>
+      <h1>Your ideas.<br><span>Your universe.</span></h1>
+      <p class="hero-description">
+        Meet NOVA — your personal AI space to think bigger, learn faster,
+        create freely, and turn your ideas into action.
+      </p>
+    </section>
+
+    <section class="chat-card" id="assistant">
+      <div class="chat-heading">
+        <div class="nova-orb">✳</div>
+        <div>
+          <h2>What can we figure out?</h2>
+          <p>Start with a question, an idea, or a big dream.</p>
+        </div>
+      </div>
+
+      <div class="suggestions">
+        <button class="suggestion" data-prompt="Help me learn a new skill">🎯 <span>Learn a skill</span></button>
+        <button class="suggestion" data-prompt="Help me build a business idea">💡 <span>Build an idea</span></button>
+        <button class="suggestion" data-prompt="Help me plan my week">📅 <span>Plan my week</span></button>
+      </div>
+
+      <form id="promptForm">
+        <textarea id="promptInput" rows="2" placeholder="Ask NOVA anything..." aria-label="Your message"></textarea>
+        <div class="composer-bottom">
+          <span>Curiosity is your superpower.</span>
+          <button class="send-button" type="submit">Ask NOVA <span>↑</span></button>
+        </div>
+      </form>
+      <div id="response" class="response" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="bottom-section">
+      <div>
+        <p class="section-label">YOUR NEXT CHAPTER</p>
+        <h2>Small steps. Big possibilities.</h2>
+        <p>Every great idea starts somewhere. Let's start yours.</p>
+      </div>
+      <div class="feature-mark">N<span>✳</span></div>
+    </section>
+
+    <footer>Made for curious minds, everywhere. <span>NOVA AI · EARLY PREVIEW</span></footer>
+  </main>
+
+  <dialog id="preferencesDialog">
+    <form method="dialog" id="preferencesForm">
+      <button class="close-button" aria-label="Close">✕</button>
+      <div class="eyebrow">MAKE NOVA YOURS</div>
+      <h2>How do you like to learn?</h2>
+      <p>Choose a style for this demo. We can build deeper personalization later.</p>
+      <label for="learningStyle">Your preferred style</label>
+      <select id="learningStyle">
+        <option value="simple">Simple and beginner-friendly</option>
+        <option value="detailed">Detailed explanations</option>
+        <option value="creative">Creative and playful</option>
+        <option value="direct">Short and straight to the point</option>
+      </select>
+      <button class="send-button save-button" type="submit">Save preference</button>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
